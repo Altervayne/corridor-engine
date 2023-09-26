@@ -2,10 +2,21 @@
     {
       "name": "Hall of Spawning",
       "id": "S000",
-      "text": "You wake up in a dark, damp corridor. You have nothing but your hands to scratch away at the walls in a desperate attempt at orienting yourself in this unfamiliar place. The whole room smells of fungi and humidity, and you feel cold. After getting a hang of where you are, you notice two hallways at the end, one to the left, and one to the right.",
+      "text": "You wake up in a dark, damp corridor. You have nothing but your hands to scratch away at the walls in a desperate attempt at orienting yourself in this unfamiliar place. The whole room smells of fungi and humidity, and you feel cold. After getting a hang of where you are, you notice two hallways at the end, one to the left, and one to the right. Upon further investigation, you also note a few scratches in the wall, you could surely attempt to dig in, if you had the tools...",
       "image": "public/adventure/assets/images/S000.png",
       "ambience": "",
       "choices":  [
+                    {
+                        "title": "Follow the hallway to the left",
+                        "sfx": "",
+                        "id": "S000L",
+                        "forbiddenFlags": [],
+                        "requiresFlags": [],
+                        "addsFlags":   [],
+                        "removesFlags": [],
+                        "hint": "",
+                        "isSecret": false
+                    },
                     {
                         "title": "Follow the hallway to the right",
                         "sfx": "",
@@ -18,16 +29,258 @@
                         "isSecret": false
                     },
                     {
-                        "title": "Follow the hallway to the left",
+                        "title": "Try to dig through the wall",
                         "sfx": "",
-                        "id": "S000L",
+                        "id": "S002",
                         "forbiddenFlags": [],
-                        "requiresFlags": [],
+                        "requiresFlags": [ "Pickaxe000" ],
                         "addsFlags":   [],
-                        "removesFlags": [],
+                        "removesFlags": [ "Pickaxe000" ],
                         "hint": "",
                         "isSecret": false
                     }
                   ]
-    }
+    },
+    {
+        "name": "Damp Corridor",
+        "id": "S000R",
+        "text": "You find yourself walking in a cold and humid corridor. The walls are lined with stones that you imagine to be decades old, decorated by wear and tear from the test of time. Your footsteps resonate in the large corridor until you reach it: A dead end.",
+        "image": "public/adventure/assets/images/S000R.png",
+        "ambience": "",
+        "choices":  [
+                      {
+                          "title": "Go back to the hall",
+                          "sfx": "",
+                          "id": "S000",
+                          "forbiddenFlags": [],
+                          "requiresFlags": [],
+                          "addsFlags":   [],
+                          "removesFlags": [],
+                          "hint": "",
+                          "isSecret": false
+                      }
+                    ]
+    },
+    {
+        "name": "Damp Corridor",
+        "id": "S000L",
+        "text": "You find yourself walking in a cold and humid corridor. The walls are lined with stones that you imagine to be decades old, decorated by wear and tear from the test of time. Your footsteps resonate in the large corridor until you reach it: A dead end. Leaning on the wall, you can find a very rusty pickaxe. It has clearly seen better days, but it might come in handy...",
+        "image": "public/adventure/assets/images/S000R.png",
+        "ambience": "",
+        "choices":  [
+                        {
+                            "title": "Go back to the hall",
+                            "sfx": "",
+                            "id": "S000",
+                            "forbiddenFlags": [],
+                            "requiresFlags": [],
+                            "addsFlags":   [],
+                            "removesFlags": [],
+                            "hint": "",
+                            "isSecret": false
+                        },
+                        {
+                          "title": "Grab the rusty pickaxe",
+                          "sfx": "",
+                          "id": "S001L",
+                          "forbiddenFlags": [],
+                          "requiresFlags": [],
+                          "addsFlags":   [
+                                            {
+                                                "type": "item",
+                                                "id": "Pickaxe000",
+                                                "name": "A rusty pickaxe",
+                                                "icon": ""
+                                            }
+                                        ],
+                          "removesFlags": [],
+                          "hint": "",
+                          "isSecret": false
+                      }
+                    ]
+    },
+    {
+        "name": "Damp Corridor",
+        "id": "S001L",
+        "text": "You find yourself walking in a cold and humid corridor. The walls are lined with stones that you imagine to be decades old, decorated by wear and tear from the test of time. Your footsteps resonate in the large corridor until you reach it: A dead end. You can still notice some small specs of rust on the floor.",
+        "image": "public/adventure/assets/images/S000R.png",
+        "ambience": "",
+        "choices":  [
+                        {
+                            "title": "Go back to the hall",
+                            "sfx": "",
+                            "id": "S001",
+                            "forbiddenFlags": [],
+                            "requiresFlags": [],
+                            "addsFlags":   [],
+                            "removesFlags": [],
+                            "hint": "",
+                            "isSecret": false
+                        }
+                    ]
+    },
+    {
+        "name": "Damp Corridor",
+        "id": "S001R",
+        "text": "You find yourself walking in a cold and humid corridor. The walls are lined with stones that you imagine to be decades old, decorated by wear and tear from the test of time. Your footsteps resonate in the large corridor until you reach it: A dead end.",
+        "image": "public/adventure/assets/images/S000R.png",
+        "ambience": "",
+        "choices":  [
+                      {
+                          "title": "Go back to the hall",
+                          "sfx": "",
+                          "id": "S001",
+                          "forbiddenFlags": [],
+                          "requiresFlags": [],
+                          "addsFlags":   [],
+                          "removesFlags": [],
+                          "hint": "",
+                          "isSecret": false
+                      }
+                    ]
+    },
+    {
+        "name": "Hall of Spawning",
+        "id": "S001",
+        "text": "You have nothing but your hands to scratch away at the walls in a desperate attempt at orienting yourself in this unfamiliar place. The whole room smells of fungi and humidity, and you feel cold. After getting a hang of where you are, you notice two hallways at the end, one to the left, and one to the right. Upon further investigation, you also note a few scratches in the wall, you could surely attempt to dig in, especially with that new pickaxe of yours.",
+        "image": "public/adventure/assets/images/S000.png",
+        "ambience": "",
+        "choices":  [
+                      {
+                          "title": "Follow the hallway to the left",
+                          "sfx": "",
+                          "id": "S001L",
+                          "forbiddenFlags": [],
+                          "requiresFlags": [],
+                          "addsFlags":   [],
+                          "removesFlags": [],
+                          "hint": "",
+                          "isSecret": false
+                      },
+                      {
+                          "title": "Follow the hallway to the right",
+                          "sfx": "",
+                          "id": "S001R",
+                          "forbiddenFlags": [],
+                          "requiresFlags": [],
+                          "addsFlags":   [],
+                          "removesFlags": [],
+                          "hint": "",
+                          "isSecret": false
+                      },
+                      {
+                          "title": "Try to dig through the wall",
+                          "sfx": "",
+                          "id": "S002",
+                          "forbiddenFlags": [],
+                          "requiresFlags": [ "Pickaxe000" ],
+                          "addsFlags":   [],
+                          "removesFlags": [ "Pickaxe000" ],
+                          "hint": "",
+                          "isSecret": false
+                      }
+                    ]
+      },
+      {
+          "name": "Damp Corridor",
+          "id": "S002L",
+          "text": "You find yourself walking in a cold and humid corridor. The walls are lined with stones that you imagine to be decades old, decorated by wear and tear from the test of time. Your footsteps resonate in the large corridor until you reach it: A dead end. You can still notice some small specs of rust on the floor.",
+          "image": "public/adventure/assets/images/S000R.png",
+          "ambience": "",
+          "choices":  [
+                          {
+                              "title": "Go back to the hall",
+                              "sfx": "",
+                              "id": "S002",
+                              "forbiddenFlags": [],
+                              "requiresFlags": [],
+                              "addsFlags":   [],
+                              "removesFlags": [],
+                              "hint": "",
+                              "isSecret": false
+                          }
+                      ]
+      },
+      {
+          "name": "Damp Corridor",
+          "id": "S002R",
+          "text": "You find yourself walking in a cold and humid corridor. The walls are lined with stones that you imagine to be decades old, decorated by wear and tear from the test of time. Your footsteps resonate in the large corridor until you reach it: A dead end.",
+          "image": "public/adventure/assets/images/S000R.png",
+          "ambience": "",
+          "choices":  [
+                        {
+                            "title": "Go back to the hall",
+                            "sfx": "",
+                            "id": "S002",
+                            "forbiddenFlags": [],
+                            "requiresFlags": [],
+                            "addsFlags":   [],
+                            "removesFlags": [],
+                            "hint": "",
+                            "isSecret": false
+                        }
+                      ]
+      },
+      {
+          "name": "Hall of Spawning",
+          "id": "S002",
+          "text": "After smashing away the wall with your rusty pickaxe, it starts falling apart, but so does your trusty tool. The strain was too much for its corroded frame..",
+          "image": "public/adventure/assets/images/S000.png",
+          "ambience": "",
+          "choices":  [
+                        {
+                            "title": "Follow the hallway to the left",
+                            "sfx": "",
+                            "id": "S002L",
+                            "forbiddenFlags": [],
+                            "requiresFlags": [],
+                            "addsFlags":   [],
+                            "removesFlags": [],
+                            "hint": "",
+                            "isSecret": false
+                        },
+                        {
+                            "title": "Follow the hallway to the right",
+                            "sfx": "",
+                            "id": "S002R",
+                            "forbiddenFlags": [],
+                            "requiresFlags": [],
+                            "addsFlags":   [],
+                            "removesFlags": [],
+                            "hint": "",
+                            "isSecret": false
+                        },
+                        {
+                            "title": "Look into the newfound hole",
+                            "sfx": "",
+                            "id": "S002H",
+                            "forbiddenFlags": [],
+                            "requiresFlags": [],
+                            "addsFlags":   [],
+                            "removesFlags": [],
+                            "hint": "",
+                            "isSecret": false
+                        }
+                      ]
+        },
+        {
+            "name": "A strange hole",
+            "id": "S002H",
+            "text": "You peer into the newly dug out hole you pried from the wall with your own efforts, only to see nothing but unending darkness. A sense of unease washes over you. You could jump into the hole, but do you want to?",
+            "image": "public/adventure/assets/images/S002H.png",
+            "ambience": "",
+            "choices":  [
+                          {
+                              "title": "Hell no I don't",
+                              "sfx": "",
+                              "id": "S002",
+                              "forbiddenFlags": [],
+                              "requiresFlags": [],
+                              "addsFlags":   [],
+                              "removesFlags": [],
+                              "hint": "",
+                              "isSecret": false
+                          }
+                        ]
+        }
   ]

@@ -208,6 +208,7 @@ footer {
 
 .scene__choices__button__disabled {
     cursor: not-allowed !important;
+    color: rgba(242, 239, 234, .6) !important;
     background-color: rgba(27, 36, 50, .6) !important;
 }
 
@@ -217,7 +218,7 @@ footer {
 }
 
 .scene__choices__button__disabled:hover {
-    color: rgba(242, 239, 234, 1) !important;
+    color: rgba(242, 239, 234, .6) !important;
     transform: scale(1) !important;
 }
 
