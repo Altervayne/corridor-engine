@@ -5,6 +5,19 @@ async function fetchArea(areaName) {
     return areaData
 }
 
+function getPageElements() {
+    const sceneTitleElement = document.getElementById("sceneTitle")
+    const sceneDescriptionElement = document.getElementById("sceneDescription")
+    const sceneImageElement = document.getElementById("sceneImage")
+    const sceneChoicesContainer = document.getElementById("sceneChoices")
+
+    return {
+        title: sceneTitleElement,
+        description: sceneDescriptionElement,
+        image: sceneImageElement,
+        choices: sceneChoicesContainer
+    }
+}
 
 /* Function to initialize the landing page */
 async function pageInit() {
@@ -14,4 +27,12 @@ async function pageInit() {
     gameTitleElement.textContent = metadata.title
 }
 
+
+
+/* ------------------------- Running Functions Block ------------------------- */
+
+/* Initializing page with base metadata info */
 pageInit()
+
+/* Initializing an object containing the game's HTML elements */
+const pageElements = getPageElements()
