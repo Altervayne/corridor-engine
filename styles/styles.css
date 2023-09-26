@@ -190,7 +190,8 @@ footer {
     outline: none;
     border: none;
 
-    height: 48px;
+    height: auto;
+    min-height: 48px;
     min-width: 192px;
 
     padding: 0 16px;
@@ -225,4 +226,118 @@ footer {
 
 
 /* Media Queries --- Phone Screens */
+@media (max-width: 600px) {
+    .header__title {
+        font-size: 26px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+
+        padding: 8px 16px;
+    }
+
+    .engineInfo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 8px 0;
+    }
+    
+    .engineInfo__logo {
+        margin-right: 8px;
+        height: 22px;
+    }
+
+    .engineInfo__title {
+        text-align: center;
+        font-size: 18px;
+
+        margin: 0
+    }
+
+    .scene {
+        padding: 32px;
+        padding-top: 90px;
+        padding-bottom: 140px;
+        width: 100%;
+        height: 100%;
+
+        background-color: transparent;
+
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scene::-webkit-scrollbar {
+        display: none
+    }
+
+    .sceneInfo {
+        flex-direction: column-reverse;
+    
+        width: 100%;
+    
+        box-sizing: border-box;
+    }
+
+    .sceneInfo__image {
+        height: auto;
+        width: 100%;
+    
+        border-radius: 8px;
+    }
+
+    .sceneInfo__text {
+        height: auto;
+        width: 100%;
+
+        margin-top: 32px;
+        padding: 0;
+    }
+
+    .scene__choices {
+        flex-direction: column;
+    }
+
+    .scene__choices__button {
+        margin: 8px;
+    }
+}
+
 /* Media Queries --- Tablet Screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .scene {
+        width: 95vw;
+        height: auto;
+    }
+
+    .scene__choices {
+        flex-wrap: wrap;
+    }
+
+    .scene__choices__button {
+        box-sizing: border-box;
+    
+        outline: none;
+        border: none;
+
+        margin: 8px 8px;
+        padding: 8px 16px;
+    
+        min-height: 50px;
+        min-width: 100px;
+
+        font-size: 16px;
+    }
+}
+
+/* Media Queries --- Medium Screens */
+@media (min-width: 1025px) and (max-width: 1600px) {
+    .scene {
+        height: auto;
+    }
+}
