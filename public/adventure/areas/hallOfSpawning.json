@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Hall of Spawning",
+      "id": "S000",
+      "text": "You wake up in a dark, damp corridor. You have nothing but your hands to scratch away at the walls in a desperate attempt at orienting yourself in this unfamiliar place. The whole room smells of fungi and humidity, and you feel cold. After getting a hang of where you are, you notice two hallways at the end, one to the left, and one to the right.",
+      "image": "public/adventure/assets/images/S000.png",
+      "ambience": "",
+      "choices":  [
+                    {
+                        "title": "Follow the hallway to the right",
+                        "sfx": "",
+                        "id": "S000R",
+                        "forbiddenFlags": [],
+                        "requiresFlags": [],
+                        "addsFlags":   [],
+                        "removesFlags": [],
+                        "hint": "",
+                        "isSecret": false
+                    },
+                    {
+                        "title": "Follow the hallway to the left",
+                        "sfx": "",
+                        "id": "S000L",
+                        "forbiddenFlags": [],
+                        "requiresFlags": [],
+                        "addsFlags":   [],
+                        "removesFlags": [],
+                        "hint": "",
+                        "isSecret": false
+                    }
+                  ]
+    }
+  ]
