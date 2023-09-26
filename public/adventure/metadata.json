@@ -1,0 +1,8 @@
+{
+    "title": "Template Adventure",
+    "creator": "Altervayne",
+    "version": "0.01",
+
+    "startingArea": "hallOfSpawning",
+    "startingScene": "S000"
+}
