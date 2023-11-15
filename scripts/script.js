@@ -40,9 +40,11 @@ async function loadScene(pageElements, scene) {
 
     console.log(scene)
 
+    /* Loop over each of the scene's choices */
     for(const choice of scene.choices) {
         let isDisabled = false
 
+        /* Check if forbidden flags are on */
         for(const flag of choice.forbiddenFlags) {
             if(!isDisabled) {
                 const hasForbiddenFlag = await flagHandler("check", flag)
@@ -52,6 +54,7 @@ async function loadScene(pageElements, scene) {
                 }
             }
         }
+        /* Check if required flags are on */
         for(const flag of choice.requiresFlags) {
             if(!isDisabled) {
                 const hasRequiredFlag = await flagHandler("check", flag)
@@ -62,6 +65,7 @@ async function loadScene(pageElements, scene) {
             }
         }
 
+        /* Check if choice should be hidden or disabled */
         if(!(choice.isSecret && isDisabled)) {
             choice.disabled = isDisabled
 
