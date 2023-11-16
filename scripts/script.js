@@ -81,6 +81,7 @@ async function choiceHandler(choice) {
     const pageElements = getPageElements()
     const areaData = await getActiveArea()
 
+    /* Adds choice's flags, makes sure to not add duplicates */
     for(const flag of choice.addsFlags) {
         console.log(flag)
         const flagAlreadyExists = await flagHandler("check", flag.id)
@@ -88,6 +89,7 @@ async function choiceHandler(choice) {
             await flagHandler("set", flag)
         }
     }
+    /* Removes flags according to the choice */
     for(const flag of choice.removesFlags) {
         const flagAlreadyExists = await flagHandler("check", flag)
         if(flagAlreadyExists) {
@@ -95,6 +97,7 @@ async function choiceHandler(choice) {
         }
     }
 
+    /* Loads the new scene */
     const newScene = findScene(areaData, choice.id)
     loadScene(pageElements, newScene)
 }
