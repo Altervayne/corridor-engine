@@ -108,9 +108,11 @@ async function choiceHandler(choice) {
 async function pageInit(pageElements) {
     const metadata = await (await fetch("public/adventure/metadata.json")).json()
 
+    /* Initialize Game's title */
     const gameTitleElement = document.getElementById("gameTitle")
     gameTitleElement.textContent = metadata.title
 
+    /* Initialize the starting area */
     await fetchArea(metadata.startingArea)
     const areaData = await getActiveArea()
     const firstScene = findScene(areaData, metadata.startingScene)
