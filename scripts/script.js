@@ -133,6 +133,7 @@ async function pageInit(pageElements) {
 
 /* Function to handle flags */
 async function flagHandler(action, flag) {
+    /* Check if action is to set a flag */
     if(action === "set") {
         const newFlag = {
             type: flag.type,
@@ -151,6 +152,7 @@ async function flagHandler(action, flag) {
         }
     }
 
+    /* Check if action is to check for a flag's presence */
     if(action === "check") {
         try {
             const flagValue = sessionStorage.getItem(flag)
@@ -168,6 +170,7 @@ async function flagHandler(action, flag) {
         }
     }
 
+    /* Check if action is to remove a flag */
     if(action === "remove") {
         try {
             sessionStorage.removeItem(flag)
